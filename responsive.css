@@ -1,0 +1,124 @@
+@media (max-width: 428px) {
+  /* RESPONSIVE CONTACTE */
+  .formulari img {
+    height: 200px;
+  }
+
+  label {
+    padding-left: 67px;
+  }
+
+  .form-privacity {
+    font-size: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    display: flex;
+    width: 70%;
+    margin: auto;
+  }
+
+  input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  /* RESPONSIVE CV */
+  .formulari-contacte img {
+    height: 200px;
+  }
+  .contacte {
+    font-size: 39px;
+  }
+  .contacte-resi {
+    top: 30%;
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  .section-title {
+    font-size: 27px;
+  }
+  .idiomes-taula {
+    font-size: 15px;
+    width: 92%;
+  }
+  .ioc {
+    width: 75%;
+  }
+  .ioc-title {
+    font-size: 20px;
+  }
+  #experiencesection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  .content-experience {
+    width: 80%;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  /* RESPONSIVE INDEX */
+  .description-sup {
+    height: 200px;
+  }
+  .description-portfoli {
+    font-size: 35px;
+    padding-top: 80px;
+  }
+  .section-title-index {
+    font-size: 27px;
+    padding-bottom: 40px;
+  }
+  .description-personal {
+    flex-direction: column;
+    padding-left: 100px;
+    text-align: center;
+  }
+  .description-personal img {
+    width: 100%;
+    margin-top: 50px;
+    padding-right: 100px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  .projects-box {
+    width: 80%;
+    padding: 20px;
+    margin: 20px;
+  }
+  .experience h1 {
+    padding-top: 40px;
+  }
+  .experience-spinner img {
+    width: 85%;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    padding-left: 15px;
+  }
+  .hobbies-title {
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+  }
+  .hobbies-section {
+    width: 100%;
+    margin: 10px;
+  }
+  /* RESPONSIVE SOCIAL */
+  .social {
+    padding-right: 50px;
+  }
+}
