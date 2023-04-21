@@ -1,6 +1,8 @@
 const flechaArriba = document.querySelector(".flecha-arriba");
 const esconderMenu = document.querySelector(".nav-icon-button");
 
+console.log({esconderMenu})
+
 flechaArriba.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
