@@ -1,2 +1,71 @@
-
-<!-- aquest fitxer va ser creat perquè pugi la carpeta PAC-2 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />    
+    <title>PAC 2 - JavaScript</title>
+  </head>
+  <body>
+    <main>   
+      <header>
+        <div class="description-sup">
+          <h1 class="title">PAC 2 - Exercici Bàsic JavaScript</h1>
+        </div>        
+      </header>
+      <section class="enunciat-llista">
+        <p class="enunciat">Crear un programa que demani 2 números num1 i num2 dins del rang 1 al 50
+            i imprimiu:
+            <ul class="llista">
+                <ol>◆ Sumar tots dos números.</ol>
+                <ol>◆ Mostrar si tots dos números introduïts són primers, si no ho són
+                    mostrar a l'usuari que no són primers tots dos o un.</ol>
+                <ol>◆ Mostrar si tots dos números introduïts són parells, si no ho són,
+                    mostrar a l'usuari que no són parells tots dos o un.</ol>
+                <ol>◆ Si el número 1 és menor que el número 2, imprimiu només els
+                    nombres parells en el rang entre num1 i num2 en forma ascendent.</ol>
+                <ol>◆ Si el número 1 és més gran que el número 2, imprimiu només els
+                    nombres imparells en el rang entre num1 i num2 en forma descendent.</ol>
+                <ol>◆ Si el número 1 és igual al número 2, imprimiu només un número; si és
+                    primer, si és parell i com que són iguals el rang només imprimeix el
+                    mateix número.</ol>
+                <ol>◆ Si els números no compleixen alguna condició, cal notificar-ho a
+                    l'usuari.</ol>
+            </ul>
+        </p>
+        <button class="btn">Veure resultat</button>
+        <div id="finestra-modal" class="modal">
+          <div class="contingut-modal">
+              <span class="tancar">&times;</span>
+              <div class="contenidor-modal">
+                <!-- <h1></h1>
+                <h3></h3>-->
+              </div>              
+          </div>
+        </div>
+      </section>
+      <footer class="social">
+        <a href="mailto:davsubiela@gmail.com" target="_blank" rel="noopener no-referrer"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <a href="https://linkedin.com/in/davidsubi" target="_blank" rel="noopener no-referrer"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/David-Subiela" target="_blank" rel="noopener no-referrer"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </footer>
+    </main>
+  </body>
+  <script src="/script.js"></script>  
+  <script src="/scriptContent.js"></script>
+</html>
