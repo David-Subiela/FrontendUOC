@@ -26,12 +26,12 @@ window.addEventListener("click", function (event) {
 const contenidorResultats = document.querySelector(".contenidor-modal");
 
 contenidorResultats.innerHTML = `
-<h1>RESULTATS:</h1>
-<h3>1.Suma --> ${sumarNumeros(num1, num2)}</h3>
-<h3>2.Primers --> ${numerosPrimersNum1(num1)}</h3>
-<h3>2.Primers --> ${numerosPrimersNum2(num2)}</h3>
-<h3>3.Parells --> ${numerosParells(num1, num2)}</h3>
-<h3>4.num1 menor num2 --> ${num1MenorNum2(num1, num2)}</h3>
-<h3>5.num1 major num2 --> ${num1MajorNum2(num1, num2)}</h3>
-<h3>6.num1 igual num2 --> ${num1IgualNum2(num1, num2)}</h3>
-`;
+  <h1>RESULTATS:</h1>
+  <h3>1.Suma --> ${sumarNumeros(num1, num2)}</h3>
+  <h3>2.Primers --> ${numerosPrimersNum1(num1)}</h3>
+  <h3>2.Primers --> ${numerosPrimersNum2(num2)}</h3>
+  <h3>3.Parells --> ${numerosParells(num1, num2)}</h3>
+  <h3>4.num1 menor num2 --> ${num1MenorNum2(num1, num2)}</h3>
+  <h3>5.num1 major num2 --> ${num1MajorNum2(num1, num2)}</h3>
+  <h3>6.num1 igual num2 --> ${num1IgualNum2(num1, num2)}</h3>
+  `;
