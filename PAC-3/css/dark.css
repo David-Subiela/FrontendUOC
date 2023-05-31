@@ -1,0 +1,50 @@
+.moon-sun {
+  /*  position: absolute; */
+  /* z-index: 1; */
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+#dark-mode,
+#light-mode {
+  text-align: right;
+  cursor: pointer;
+}
+
+#dark-mode .fa-moon {
+  color: #fff;
+}
+#light-mode .fa-sun {
+  color: #f1c40f;
+}
+
+.dark .logo {
+  background-color: #690c0a;
+  color: #fff;
+}
+.dark .poke-main {
+  background-color: #273746;
+}
+.dark .tarjeta {
+  background-color: #ffe88a;
+}
+.dark .tarjeta h5 {
+  color: #690c0a;
+  font-size: 700;
+}
+.dark .tarjeta h2,
+.tarjeta p {
+  color: #365eaa;
+}
+
+.dark .tarjeta p {
+  border: 1px solid #5f5a5a;
+}
+
+.dark .social {
+  background-color: azure;
+}
+
+.dark .social i {
+  color: #463f3f;
+}

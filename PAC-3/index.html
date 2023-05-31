@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/dark.css" />
+    <link rel="stylesheet" href="/css/pokeloader.css" />
+    <link rel="stylesheet" href="/css/back-cards.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <div class="wrapper loader" id="loader">
+      <p class="charge">Cargando Pokemon...</p>
+      <div class="pokeball"></div>
+    </div>
+    <div class="flecha-arriba">
+      <img src="/assets/flecha.png" alt="flecha" />
+    </div>
+
+    <main class="poke-main">
+      <header>
+        <nav class="logo">
+          <img
+            class="logo-pokemon"
+            src="assets/logo-pokemon.png"
+            alt="logo Pokemon"
+          />
+          <div class="box">
+            <input
+              type="search"
+              placeholder="Busca aquí tu Pokémon"
+              class="src"
+              id="autocomplete-input"
+              autocomplete="off"
+            />
+            <button class="btn">
+              <img src="/assets/btn_pokeball.png" alt="pokeball" />
+            </button>
+          </div>
+          <div class="moon-sun">
+            <div id="dark-mode">
+              <i class="fa-solid fa-moon fa-2x"></i>
+            </div>
+            <div id="light-mode">
+              <i class="fa-solid fa-sun fa-2x"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- <template id="tarjeta"> -->
+      <article>
+        <div>
+          <img class="ash-pika" src="/assets/5FBP.gif" alt="Ash y Pikachu" />
+        </div>
+        <section id="cards" class="section-poke-cards">
+          <span></span>
+          <!-- <div id="cards" class="poke-cards"></div> -->
+          <!-- <div class="poke-cards"></div>
+          <div class="poke-cards"></div>
+          <div class="poke-cards"></div>
+          <div class="poke-cards"></div>
+          <div class="poke-cards"></div>
+          <div class="poke-cards"></div>
+          <div class="poke-cards"></div>
+          <div class="poke-cards"></div>
+          <div class="poke-cards"></div> -->
+        </section>
+        <div id="finestra-modal" class="modal">
+          <div class="contingut-modal">
+            <span class="tancar">&times;</span>
+            <div class="contenidor-modal">
+              <!-- <h1></h1>
+                <h3></h3>-->
+            </div>
+          </div>
+        </div>
+        <div>
+          <img class="chariz" src="/assets/Charizard.gif" alt="Charizard" />
+        </div>
+      </article>
+      <!--   </template> -->
+      <footer class="social">
+        <a
+          href="mailto:davsubiela@gmail.com"
+          target="_blank"
+          rel="noopener no-referrer"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <a
+          href="https://linkedin.com/in/davidsubi"
+          target="_blank"
+          rel="noopener no-referrer"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a
+          href="https://github.com/David-Subiela"
+          target="_blank"
+          rel="noopener no-referrer"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </footer>
+      <script src="/js/BORRARR.js"></script>
+      <script src="/js/darkMode.js"></script>
+      <script src="/js/script.js"></script>
+      <script src="/js/scriptLoader.js"></script>
+    </main>
+  </body>
+</html>

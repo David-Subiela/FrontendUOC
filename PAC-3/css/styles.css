@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+main {
+  background-color: #ffe88a;
+}
+
+/* FLETXA
+ * =================================================================== */
+.flecha-arriba {
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #d35b59;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+  box-shadow: 0 0 10px #fff, 0 0 0 3px #0003;
+}
+
+.flecha-arriba img {
+  width: 80%;
+}
+
+.logo {
+  background-color: #d62e2c;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo-pokemon {
+  width: 200px;
+}
+
+/* SEARCH BUTTON */
+.box {
+  /* position: absolute;
+  z-index: 1; */
+  display: flex;
+  align-items: center;
+  top: 30px;
+  right: 550px;
+  width: 220px;
+}
+input.src {
+  height: 30px;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 25px;
+  color: #1f1c1c;
+  background: #fff url("/assets/search-icon.png") no-repeat 9px center;
+  transition: all 0.5s;
+}
+
+/* input.src:hover {
+  width: 95%;
+  background-color: #fff;
+  box-shadow: 0 0 10px #1f1c1c;
+} */
+textarea:focus,
+input:focus,
+input[type]:focus {
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px #fff;
+  outline: 0 none;
+}
+#autocomplete-input {
+  padding-left: 35px;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.btn img {
+  width: 35px;
+  height: 35px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn img:hover {
+  transform: rotate(360deg);
+  transition: 2s ease-in-out;
+}
+
+.ash-pika {
+  position: relative;
+  display: block;
+  width: 150px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #37aa54;
+}
+.chariz {
+  display: block;
+  width: 200px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CARDS */
+/* .section-poke-cards {
+  background: #151515 url(/assets/NWUUPC.gif) no-repeat top center;
+  background-size: cover;
+} */
+
+/* /FORMAT TARGETA POKEMON: */
+.section-poke-cards {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid gray;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  background-color: #f2f2f2;
+
+  /* transform: rotateX(0deg); */
+}
+.tarjeta:hover {
+  /* transform: rotateX(180deg); */
+  /* background: repeating-linear-gradient(
+    -45deg,
+    #ececec,
+    #ececec 10px,
+    #dedede 10px,
+    #dedede 20px
+  );
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.5s; */
+  background-color: #f2f2f2;
+}
+
+.tarjeta-list {
+  display: flex;
+}
+.tarjeta img {
+  width: 175px;
+}
+.tarjeta h5 {
+  font-size: 15px;
+  text-align: left;
+  color: #5f5a5a;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+.tarjeta h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.tarjeta p {
+  display: inline-block;
+  font-size: 13px;
+  width: 25%;
+  border: 1px solid #d62e2c;
+  border-radius: 25px;
+  align-items: center;
+}
+.filtre {
+  display: none;
+}
+
+/* FOOTER - XARXES SOCIALS */
+.social {
+  background-color: #463f3f;
+  text-align: center;
+  padding: 20px;
+}
+
+.social i {
+  color: azure;
+  font-size: 30px;
+  padding-left: 50px;
+}

@@ -1,0 +1,49 @@
+/* MODAL */
+.modal {
+  display: none; /* PER DEFECTE, ESTARÁ OCULT */
+  position: fixed; /* POSICIÓ FIXA */
+  z-index: 1; /* Se situará por encima de otros elementos de la página*/
+  padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Algura completa */
+  overflow: auto; /* Se activará el scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
+}
+
+/* FINESTRA O CAIXA MODAL */
+.contingut-modal {
+  position: relative; /* RELATIU RESPECTE AL CONTENIDOR MODAL */
+  background-color: #f2f2f2;
+  margin: auto; /* CENTRADA */
+  padding: 20px;
+  width: 60%;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s;
+}
+
+@keyframes animarsuperior {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* BOTÓ TANCAR */
+.tancar {
+  color: black;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+.tancar:hover,
+.tancar:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
