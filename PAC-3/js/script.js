@@ -5,7 +5,8 @@ window.onload = inici;
 
 function aleatori(min, max) {
   // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  /* return Math.floor(Math.random() * (max - min + 1) + min); */
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 /* FUNCIÓ CÀRREGA IMATGES */
@@ -15,6 +16,7 @@ function inici() {
 }
 
 /* FUNCIÓ ALEATORITZAR POKEMON (*10) AMB MIN i MAX */
+
 function pintarVitrina(evento) {
   container.innerHTML = "";
   mostrarDades(aleatori(1, total_pokemons));
@@ -51,10 +53,6 @@ function mostrarDades(id) {
       let tipos = data.types.map((type) => `<p>${type.type.name}</p>`);
       tipos = tipos.join("");
 
-      /* if (tipos === "water") {
-        tipos.style.backgroundColor = "green";
-      } */
-
       if (pokeName && url && pokeId && tipos) {
         imprimirTarjeta(pokeName, url, pokeId, tipos);
       }
@@ -65,7 +63,7 @@ function mostrarDades(id) {
 }
 
 function imprimirTarjeta(pokeName, url, pokeId, tipos) {
-  let template = `<div class="tarjeta">    
+  let template = `<div class="tarjeta" id="${pokeName}">    
         <img src="${url}" alt="" >
           <br>
           <h5>${pokeId}</h5>          

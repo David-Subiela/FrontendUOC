@@ -30,7 +30,8 @@ document.addEventListener("keyup", (e) => {
     if (e.key === "Escape") e.target.value = "";
 
     document.querySelectorAll(".tarjeta").forEach((pokemon) => {
-      pokemon.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+      /*  pokemon.textContent.toLowerCase().includes(e.target.value.toLowerCase()) */
+      pokemon.id.includes(e.target.value.toUpperCase())
         ? pokemon.classList.remove("filtre")
         : pokemon.classList.add("filtre");
     });
