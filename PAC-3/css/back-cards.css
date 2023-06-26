@@ -47,3 +47,8 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+#pokemon-imatge {
+  width: 275px;
+  margin-left: 110px;
+}

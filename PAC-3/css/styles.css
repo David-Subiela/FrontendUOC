@@ -45,7 +45,8 @@ main {
   width: 200px;
 }
 
-/* SEARCH BUTTON */
+/* SEARCH BUTTON
+* =================================================================== */
 .box {
   /* position: absolute;
   z-index: 1; */
@@ -115,13 +116,8 @@ button {
   margin-right: auto;
 }
 
-/* CARDS */
-/* .section-poke-cards {
-  background: #151515 url(/assets/NWUUPC.gif) no-repeat top center;
-  background-size: cover;
-} */
-
-/* /FORMAT TARGETA POKEMON: */
+/* /FORMAT TARGETA POKEMON:
+* =================================================================== */
 .section-poke-cards {
   display: flex;
   justify-content: space-around;
@@ -130,6 +126,7 @@ button {
 }
 
 .tarjeta {
+  margin: 5px;
   padding: 10px;
   border-radius: 25px;
   border: 1px solid gray;
@@ -137,21 +134,8 @@ button {
   cursor: pointer;
   width: 20%;
   background-color: #f2f2f2;
-
-  /* transform: rotateX(0deg); */
 }
 .tarjeta:hover {
-  /* transform: rotateX(180deg); */
-  /* background: repeating-linear-gradient(
-    -45deg,
-    #ececec,
-    #ececec 10px,
-    #dedede 10px,
-    #dedede 20px
-  );
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  transition: transform 0.5s; */
   background-color: #f2f2f2;
 }
 
@@ -184,7 +168,8 @@ button {
   display: none;
 }
 
-/* FOOTER - XARXES SOCIALS */
+/* FOOTER - XARXES SOCIALS
+ * =================================================================== */
 .social {
   background-color: #463f3f;
   text-align: center;

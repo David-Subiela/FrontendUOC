@@ -19,12 +19,13 @@ function inici() {
 
 function pintarVitrina(evento) {
   container.innerHTML = "";
-  mostrarDades(aleatori(1, total_pokemons));
-  mostrarDades(aleatori(1, total_pokemons));
 
   mostrarDades(aleatori(1, total_pokemons));
   mostrarDades(aleatori(1, total_pokemons));
   mostrarDades(aleatori(1, total_pokemons));
+  mostrarDades(aleatori(1, total_pokemons));
+  mostrarDades(aleatori(1, total_pokemons));
+
   mostrarDades(aleatori(1, total_pokemons));
   mostrarDades(aleatori(1, total_pokemons));
   mostrarDades(aleatori(1, total_pokemons));
@@ -76,4 +77,11 @@ function imprimirTarjeta(pokeName, url, pokeId, tipos) {
   container.innerHTML += template;
 }
 
+/* const contenidorResultats = document.querySelector(".contenidor-modal");
+contenidorResultats.innerHTML = `
+<img src="" alt="" >
+<p>XXXXX</p>
+<p>XXXXX</p>
+`;
+ */
 inici();
