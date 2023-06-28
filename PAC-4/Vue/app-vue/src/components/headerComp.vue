@@ -9,6 +9,7 @@
         class="src"
         id="autocomplete-input"
         autocomplete="off"
+        @input="searchKeyword"
       />
       <button class="btn">
         <img src="@/assets/btn_pokeball.png" alt="pokeball" />
@@ -16,15 +17,9 @@
     </div>
     <div>
       <div class="moon-sun">
-        <div id="dark-mode">
-          <div ref="btnDark" @click="darkMode">
-            <i class="fa-solid fa-moon fa-2x"></i>
-          </div>
-        </div>
-        <div id="light-mode">
-          <div ref="btnLight" @click="lightMode" style="display: none">
-            <i class="fa-solid fa-sun fa-2x"></i>
-          </div>
+        <div @click="toggleDarkMode">
+          <i class="fa-solid fa-moon" v-if="!isDarkMode"></i>
+          <i class="fa-solid fa-sun" v-else></i>
         </div>
       </div>
     </div>
@@ -36,43 +31,49 @@ import { ref, onMounted } from 'vue'
 
 export default {
   name: 'headerComp',
-  setup() {
-    const btnDark = ref(null)
-    const btnLight = ref(null)
-
-    const darkMode = () => {
-      btnDark.value.style.display = 'none'
-      btnLight.value.style.display = 'block'
-      localStorage.setItem('ModoOscuro', true)
-      document.documentElement.classList.add('dark')
+  emits: ['keyword'],
+  data() {
+    return {
+      pokemonName: null
     }
+  },
+  methods: {
+    searchKeyword() {
+      this.$emit('keyword', this.pokemonName)
+    }
+  },
 
-    const lightMode = () => {
-      btnDark.value.style.display = 'block'
-      btnLight.value.style.display = 'none'
-      localStorage.setItem('ModoOscuro', false)
-      document.documentElement.classList.remove('dark')
+  setup() {
+    const pokemonName = ref('')
+    const isDarkMode = ref(false)
+
+    const toggleDarkMode = () => {
+      isDarkMode.value = !isDarkMode.value
+      if (isDarkMode.value) {
+        localStorage.setItem('ModoOscuro', true)
+        document.documentElement.classList.add('dark')
+      } else {
+        localStorage.setItem('ModoOscuro', false)
+        document.documentElement.classList.remove('dark')
+      }
     }
 
     let modos = localStorage.getItem('ModoOscuro')
     modos = modos !== null ? modos === 'true' : false
-
-    if (modos) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
+    isDarkMode.value = modos
 
     onMounted(() => {
-      btnDark.value = document.querySelector('#dark-mode')
-      btnLight.value = document.querySelector('#light-mode')
+      if (isDarkMode.value) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
     })
 
     return {
-      btnDark,
-      btnLight,
-      darkMode,
-      lightMode
+      pokemonName,
+      isDarkMode,
+      toggleDarkMode
     }
   }
 }
@@ -132,21 +133,49 @@ button {
 }
 
 /* Estilos para los botones de modo oscuro */
+.fa-solid,
+.fas {
+  font-size: 25px;
+}
 .moon-sun {
   padding-top: 15px;
-  padding-right: 15px;
-}
-
-#dark-mode,
-#light-mode {
-  text-align: right;
+  /* padding-right: 15px; */
   cursor: pointer;
 }
 
-#dark-mode .fa-moon {
+.moon-sun .fa-moon {
   color: #fff;
 }
-#light-mode .fa-sun {
+.moon-sun .fa-sun {
   color: #f1c40f;
+}
+
+.dark .logo {
+  background-color: #690c0a;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 428px) {
+  .logo-pokemon {
+    width: 100px;
+  }
+  input.src {
+    height: 20px;
+    font-size: 10px;
+    width: 154px;
+    margin-left: 25px;
+  }
+  .btn img {
+    width: 22px;
+    height: 22px;
+  }
+  .fa-solid,
+  .fas {
+    font-size: 17px;
+  }
+  .moon-sun {
+    padding-top: 7px;
+  }
 }
 </style>

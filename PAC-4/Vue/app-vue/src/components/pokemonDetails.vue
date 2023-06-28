@@ -124,4 +124,27 @@ h2.pokename-format {
 .stats-format {
   margin: 8px;
 }
+
+/* DARK MODE - POPUP */
+.dark h3.id-format {
+  background-color: #e4e4e4;
+  color: #5f5a5a;
+}
+.dark .modal {
+  background-color: #ffe88a;
+}
+.dark h2.pokename-format {
+  color: #365eaa;
+}
+.dark .stats-format {
+  color: #690c0a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 428px) {
+  .modal {
+    width: 350px;
+    max-width: 80%;
+  }
+}
 </style>

@@ -14,10 +14,7 @@
 
 <script>
 export default {
-  name: 'footerComp',
-  methods: {
-    // Agrega aquí tus funciones JavaScript
-  }
+  name: 'footerComp'
 }
 </script>
 
@@ -33,5 +30,19 @@ export default {
   color: azure;
   font-size: 30px;
   padding-left: 50px;
+}
+
+.dark .social {
+  background-color: azure;
+}
+.dark .social i {
+  color: #463f3f;
+}
+
+@media (max-width: 428px) {
+  .social i {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
 }
 </style>

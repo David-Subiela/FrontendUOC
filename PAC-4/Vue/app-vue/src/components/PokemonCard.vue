@@ -1,4 +1,5 @@
 <template>
+  <!-- <button class="battle-button" @click="iniciarBatalla">Batalla Pokemon</button> -->
   <div>
     <img class="ash-pika" src="@/assets/5FBP.gif" alt="Ash y Pikachu" />
   </div>
@@ -49,13 +50,15 @@
 </template>
 
 <script>
-import { reactive, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import PokemonDetails from './pokemonDetails.vue'
 
 export default {
   components: {
     PokemonDetails
   },
+  props: ['searchPoke'],
+
   data() {
     return {
       selectedPokemonDetails: {},
@@ -66,12 +69,16 @@ export default {
     closeDetailsPopup() {
       this.selectedPokemonDetails = {}
       this.showDetailsPopup = false
+    },
+    iniciarBatalla() {
+      // Redirigir al usuario al componente CombatePokemon
+      this.$router.push('/batalla-pokemon')
     }
   },
-  setup() {
+  setup(props) {
     const pokemons = reactive([])
     const selectedPokemon = reactive({})
-    const pokemonName = ref('')
+    const pokemonName = computed(() => props.searchPoke)
     const randomPokemonIds = ref([])
 
     const typeClasses = {
@@ -181,6 +188,26 @@ export default {
 </script>
 
 <style scoped>
+/* BATTLE BUTTON */
+/* .battle-button {
+  background-color: #8984a4;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.battle-button:hover {
+  background-color: #c62828;
+} */
+
 .ash-pika {
   position: relative;
   display: block;
@@ -206,6 +233,7 @@ export default {
 }
 
 .tarjeta {
+  /* width: calc(50% - 20px); */
   width: 200px;
   height: 300px;
   margin: 10px;
@@ -384,5 +412,87 @@ export default {
 .type-fairy {
   background-color: #ee99ac;
   color: #000;
+}
+
+/* DARK MODE */
+.dark .tarjeta {
+  background-color: #ffe88a;
+}
+.dark h3.name-format {
+  color: #365eaa;
+}
+
+/* DARK MODE - FORMAT BOTÓ DETALLS POKEMON: */
+.dark .details-button {
+  background-color: #365eaa;
+  border: 3px solid #fbbf24;
+  color: #fff;
+}
+
+.dark .details-button:hover {
+  background-color: #fbbf24;
+  border: 3px solid #365eaa;
+  color: #333;
+}
+
+/* DARK MODE - FORMAT ID POKEMON: */
+.dark .id-format {
+  background-color: #e4e4e4;
+  color: #5f5a5a;
+}
+
+/* DARK MODE - BATTLE BUTTON */
+/* .dark .battle-button {
+  background-color: #c62828;
+}
+
+.dark .battle-button:hover {
+  background-color: #8984a4;
+} */
+
+/* RESPONSIVE: */
+@media (max-width: 768px) {
+  .ash-pika {
+    width: 100px;
+  }
+  .tarjeta {
+    width: 150px;
+    height: 250px;
+  }
+
+  .tarjeta img {
+    width: 120px;
+  }
+
+  .tarjeta h3 {
+    font-size: 16px;
+  }
+
+  .tarjeta p {
+    font-size: 12px;
+  }
+
+  .details-button {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  @media (max-width: 428px) {
+    .ash-pika {
+      width: 100px;
+    }
+    .chariz {
+      width: 150px;
+    }
+
+    .tarjeta {
+      width: 150px;
+      height: 270px;
+    }
+    /* .battle-button {
+      font-size: 8px;
+      padding: 7px 13px;
+    } */
+  }
 }
 </style>
